@@ -1,0 +1,26 @@
+
+import boto3
+def lambda_handler(event, context):
+    # create filter for instances with tags
+    
+    filters = [
+        {
+            'Name': 'tag:Name', 
+            'Values': ['MyASGInstance']
+        }
+    ]
+    
+    # filtering the instances based on filters() above
+
+    instances = ec2.instances.filter(Filters=filters)
+
+ # instantiate empty array
+   
+ TaggedInstances = []
+
+   for instance in instances:
+       
+# for each instance, append to array and print instance id
+        
+TaggedInstances.append(instance.id)
+ print (instance.id)
