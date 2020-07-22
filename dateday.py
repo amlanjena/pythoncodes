@@ -6,5 +6,5 @@ def findDay(date):
 	return (calendar.day_name[born]) 
 
 # Driver program 
-date = '22  07  2020'
+date = '24  07  2020'
 print(findDay(date))
