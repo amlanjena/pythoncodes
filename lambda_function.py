@@ -16,7 +16,7 @@ def lambda_handler(event, context):
  url = "https://api3.prismacloud.io/search/config"
  UN = os.environ["username"]
  Pass = os.environ["password"]
- JWT_TOKEN = login.login(UN, Pass)
+ JWT_TOKEN = "eax2543h45pfert"
  REQ_HEADER = {'Content-Type':'application/json','x-redlock-auth':JWT_TOKEN}
  
 
@@ -78,4 +78,5 @@ def lambda_handler(event, context):
         'statusCode': 200,
         #'body':
     }
+
 
